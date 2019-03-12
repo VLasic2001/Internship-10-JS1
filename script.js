@@ -2,7 +2,7 @@ let loop = true;
 
 while (loop){
     let choice = prompt("Odaberi redni broj algoritma kojeg zelis izvrsiti: \n\n 1 \u2BC8 Obrni sve \n\n 2 \u2BC8 Max slova \n\n 3 \u2BC8 Capitalize \n\n 4 \u2BC8 Obrni slova \n\n KRAJ \u2BC8 Kraj programa");
-    if (choice.toLowerCase() != "kraj"){
+    if (choice != undefined){
         if(choice == "1" || choice == "2" || choice == "3" || choice == "4"){
             let text = prompt("Unesite tekst za algoritam:");
             if (text.length == 0)
@@ -25,6 +25,11 @@ while (loop){
             }
             }
         }    
+        else if (choice.toLowerCase() == "kraj"){
+            if(window.confirm("Are you sure you want to end the program?")){
+                loop = false;
+            } 
+        }
         else
         alert("Invalid choice input");
     }
