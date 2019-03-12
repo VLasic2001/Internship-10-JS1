@@ -143,7 +143,7 @@ function secondTask(array){
         console.log(character);
         totalMass += character.mass;
     }
-    console.log("Average mass is", totalMass/2);
+    console.log("Average mass is", totalMass/5);
 }
 
 var array;
